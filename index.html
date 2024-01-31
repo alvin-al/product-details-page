@@ -9,10 +9,25 @@
 
     <link rel="stylesheet" href="./src/style/output.css"/>
 </head>
-<body>
+<body class="p-2">
     <!-- auto responsive navigation bar -->
-    <nav id="navbar" class="navibar">
-        
+    <nav id="navbar" class="py-2">
+        <!-- Logo -->
+        <a href="#home" class=""><img src="src/assets/images/logo.png" alt="" class="mb-4"></a>
+        <!-- Menu list -->
+        <div id="menu-list" class="flex flex-col bg-black w-full gap-2 px-4">
+            <a href="Home" class="pt-3 text-white">Home</a>
+            <a href="#shop" class=" text-white">Shop</a>
+            <a href="#about" class=" text-white">About</a>
+            <a href="#contact" class="pb-3 text-white">Contact</a>
+        </div>
+        <!-- Toogle button -->
+        <a href="" onclick="">
+            <i class="fa fa-shopping-bag text-[24px]" aria-hidden="true"></i>
+        </a>
+        <a href="" onclick="">
+            <i class="fa fa-bars text-[24px] bg-black text-white p-2" aria-hidden="true"></i>
+        </a>
     </nav>
 
 
