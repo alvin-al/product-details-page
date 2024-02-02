@@ -9,27 +9,31 @@
 
     <link rel="stylesheet" href="./src/style/output.css"/>
 </head>
-<body class="p-2 lg:px-32">
+<body class="">
 
     <!-- auto responsive navigation bar -->
-    <nav id="navbar" class="py-2 md:flex md:items-center md:justify-around md:py-4 border-b-2 divide-slate-700">
+    <nav id="navbar" class="py-2 md:flex md:items-center md:justify-around md:py-4  lg:px-32 md:border-b-2 md:divide-slate-700">
 
-
-        <div id="logo-menu" class="flex justify-between items-center"> 
+        <div id="logo-menu" class="flex justify-between items-center mt-1 mb-3 px-2">
+    
             <!-- Logo -->
-        <a href="#home" class=""><img src="src/assets/images/logo.png" alt="" class="mb-0 md:mb-0"></a>
+            <a href="#home" class=""><img src="src/assets/images/logo.png" alt="" class=" md:mb-0"></a>
 
         <!-- Hamburger mobile -->
-        <div id="icon" class="flex gap-6 md:hidden ">
-            <a href="" onclick="">
-                <i class="fa fa-shopping-bag text-[24px] p-2 border" aria-hidden="true"></i>
-            </a>
-            <a href="" onclick="">
-                <i class="fa fa-bars text-[24px] bg-black text-white p-2 lg:hidden" aria-hidden="true"></i>
-            </a>
-        </div>
+            <div id="icon" class="flex gap-4 md:hidden ">
+                <a href="" onclick="">
+                    <i class="fa fa-shopping-bag text-[24px] p-2 border" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0);" onclick="openHamburgerBar()">
+                    <i class="fa fa-bars text-[24px] bg-black text-white p-2 lg:hidden" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            
         </div>
 
+        <!-- divider -->
+        <div class="border-b-2 divide-slate-700 md:hidden"></div>
 
 
         <!-- Search bar -->
@@ -38,16 +42,16 @@
         </div>
         
         <!-- Menu list -->
-        <div id="menu-list">
-            <ul class="flex flex-col bg-black text-white w-full gap-2 lg:gap-8 md:gap-6 px-4 lg:text-base md:bg-white md:text-black md:flex-row">
+        <div id="menu-list" class="md:block hidden transition-top duration-default ease-in-out">
+            <ul class="flex flex-col bg-black text-white w-full gap-2 lg:gap-8 md:gap-6 px-4 lg:text-base md:bg-white md:text-black md:flex-row ">
                 <li class="pt-3 md:pt-0"><a href="Home" >Home</a></li>
-                <li class=" "><a href="#shop" >Shop</a></li>
+                <li class=""><a href="#shop" >Shop</a></li>
                 <li class=""><a href="#about" >About</a></li>
                 <li class="pb-3 md:pb-0"><a href="#contact">Contact</a></li>
             </ul>
         </div>
-        <!-- Toogle button -->
-        <div id="icon" class="md:flex gap-6 hidden ">
+        <!-- Cart button -->
+        <div id="icon" class="md:flex gap-6 hidden">
             <a href="" onclick="">
                 <i class="fa fa-shopping-bag text-[24px]" aria-hidden="true"></i>
             </a>
