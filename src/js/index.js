@@ -6,4 +6,13 @@ openHamburgerBar = () => {
     }else{
         menuList.style.display = 'block';
     }
-}
+};
+
+
+change = (src) => {
+    const mainPicture = document.getElementById('main-picture');
+    const thumbPicture = document.getElementById('src')
+
+    mainPicture.src = src;
+    thumbPicture.classList.replace('opacity-60','opacity-100');
+};

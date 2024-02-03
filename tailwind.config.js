@@ -1,19 +1,14 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [".src/**/*.{js}", "*.html"],
+  content: [".src/**/*.js", "*.html"],
   theme: {
-    extend: {
-      transitionProperty: {
-        'top': 'top',
-      },
-      transitionDuration: {
-        'default': '0.3s',
-      },
-      transitionTimingFunction: {
-        'default': 'ease-in-out',
-      },
-    },
+    fontFamily: {
+      'jakarta' :['Plus Jakarta Sans', 'sans-serif'],
+    }
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }
 
