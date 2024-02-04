@@ -19,7 +19,7 @@
     <!-- auto responsive navigation bar -->
     <nav id="navbar" class="py-2 md:flex md:items-center md:justify-around md:py-4 lg:px-32 md:border-b-2 md:divide-slate-700">
 
-        <div id="logo-menu" class="flex justify-between items-center mt-1 mb-3 px-4">
+        <div id="logo-menu" class="flex justify-between items-center">
     
             <!-- Logo -->
             <a href="#home" class=""><img src="src/assets/images/logo.png" alt="" class=" md:mb-0"></a>
@@ -64,15 +64,15 @@
     </nav>
 
 
-    <main id="main-section" class="px-4 box-border">
-        <div id="category" class="mb-2">
+    <main id="main-section" class="px-4 box-border w-full lg:px-32">
+        <div id="category" class="my-2">
             <a href="#" class="text-gray-500 font-jakarta">Sneakers</a>
             <span class="mx-1 font-jakarta">></span>
             <a href="#" class="font-jakarta">Nike</a>
         </div>
 
-        <div id="gallery-view" class="max-w-full">
-            <img id="main-picture" src="src/assets/images/1.png" alt="" class="rounded-lg mb-4">
+        <div id="gallery-view" class="max-w-full box-border">
+            <img id="main-picture" src="src/assets/images/1.png" alt="" class="rounded-lg mb-4 ">
 
             <!-- Thumbnail of another pic -->
             <div id="thumbnail-pictures" class="flex h-32 overflow-auto whitespace-nowrap gap-2 no-scrollbar mb-4">
@@ -99,8 +99,8 @@
             <div id="color" class="mb-4">
                 <h3 class="font-jakarta font-semibold">Color</h3>
                 <div id="color-button" class="flex gap-2">
-                    <button class="px-5 py-1.5 bg-gray-800 rounded text-white font-jakarta">White</button>
-                    <button class="px-5 py-1.5 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">Black</button>
+                    <button class="w-20 h-10 bg-gray-800 rounded text-white font-jakarta">White</button>
+                    <button class="w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">Black</button>
                 </div>
             </div>
 
@@ -108,13 +108,13 @@
             <div id="size" class="mb-8">
                 <h3 class="font-jakarta font-semibold">Select size</h3>
 
-                <div id="size-button" class="grid grid-cols-4 grid-rows-2 gap-2">
-                    <div class=""><button class="w-20 py-1.5 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">39</button></div>
-                    <div><button class="w-20 py-1.5 bg-gray-800 rounded text-white font-jakarta">39</button></div>
-                    <div><button class="w-20 py-1.5 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">40</button></div>
-                    <div><button class="w-20 py-1.5 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">41</button></div>
-                    <div><button class="w-20 py-1.5 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">42</button></div>
-                    <div><button class="w-20 py-1.5 bg-white border-[1px] border-gray-400 rounded text-gray-400 font-jakarta">43</button></div>
+                <div id="size-button" class="grid grid-cols-4 grid-rows-2 gap-3 gap-x-2 max-w-fit box-border">
+                    <div class=""><button class="w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">39</button></div>
+                    <div><button class="w-20 h-10 bg-gray-800 rounded text-white font-jakarta">39</button></div>
+                    <div><button class="w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">40</button></div>
+                    <div><button class="w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">41</button></div>
+                    <div><button class="w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta row-start-2">42</button></div>
+                    <div><button class="w-20 h-10 bg-white border-[1px] border-gray-400 rounded text-gray-400 font-jakarta row-start-2">43</button></div>
                 </div>
             </div>
 
@@ -123,9 +123,9 @@
 
             
             <!-- Add to cart & favorite item -->
-            <div id="cart-fav" class="flex justify-between mb-8">
-                <button class="w-[83%] py-1.5 bg-gray-800 border-[1px] border-gray-800 rounded text-white font-jakarta font-medium">Add to cart</button>
-                <button class="w-[15%] py-1.5 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+            <div id="cart-fav" class="flex justify-between mb-8 w-full">
+                <button class="w-[83%] h-10 bg-gray-800 border-[1px] border-gray-800 rounded text-white font-jakarta font-medium">Add to cart</button>
+                <button class="w-[15%] h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
             </div>
 
             
