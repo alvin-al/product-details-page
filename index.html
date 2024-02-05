@@ -17,7 +17,7 @@
 <body class="md:mb-32">
 
     <!-- auto responsive navigation bar -->
-    <nav id="navbar" class="py-2 px-4 md:flex md:items-center md:justify-between md:py-4 lg:px-64 md:border-b-2 md:divide-slate-700">
+    <nav id="navbar" class="py-2 px-4 md:flex md:items-center md:justify-between md:py-4 lg:px-24 md:border-b-2 md:divide-slate-700 2xl:px-64">
 
         <div id="logo-menu" class="flex justify-between items-center">
     
@@ -39,7 +39,7 @@
 
         <!-- Search bar -->
         <div class="flex items-center">
-            <input type="text" class="border border-gray-300 h-10 rounded-sm hidden md:w-32 xl:w-64 md:block px-4 w-64" placeholder="Search..."> 
+            <input type="text" class="border border-gray-300 h-10 rounded-sm hidden md:w-32 xl:w-64 md:block px-4 w-64 font-jakarta" placeholder="Search..."> 
         </div>
         
         <!-- Menu list -->
@@ -65,7 +65,7 @@
     <!-- divider -->
     <div class="border-b-2 divide-slate-700 md:hidden"></div>
 
-    <main id="main-section" class="px-4 box-border w-full lg:px-64 md:flex">
+    <main id="main-section" class="px-4 box-border w-full lg:px-24 2xl:px-64 md:flex">
         
         <!-- Left section on md view -->
         <div id="left" class="md:w-[50%]">
@@ -75,21 +75,21 @@
                 <a href="#" class="font-jakarta">Nike</a>
             </div>
     
-            <div id="gallery-view" class="max-w-full md:box-border lg:pr-8 md:pr-4">
+            <div id="gallery-view" class="max-w-full md:box-border lg:pr-6 md:pr-2">
                 <img id="main-picture" src="src/assets/images/1.png" alt="" class="rounded-lg mb-4 md:w-full">
     
                 <!-- Thumbnail of another pic -->
-                <div id="thumbnail-pictures" class="flex h-32 overflow-auto whitespace-nowrap gap-2 no-scrollbar md:h-40 md:box-border">
-                    <img src="src/assets/images/1.png" alt="" class="rounded object-contain opacity-60" onclick="change(this.src)">
-                    <img src="src/assets/images/2.png" alt="" class="rounded object-contain opacity-60" onclick="change(this.src)">
-                    <img src="src/assets/images/3.png" alt="" class="rounded object-contain opacity-60 " onclick="change(this.src)">
-                    <img src="src/assets/images/4.png" alt="" class="rounded object-contain opacity-60 " onclick="change(this.src)">
+                <div id="thumbnail-pictures" class="flex h-32 overflow-auto gap-2 no-scrollbar lg:overflow-hidden lg:gap-0 md:h-24 lg:h-[92px] xl:h-40 lg:justify-between md:box-border">
+                    <img src="src/assets/images/1.png" alt="" class="rounded object-contain opacity-60 focus:opacity-100" onclick="changePicture(this.src)">
+                    <img src="src/assets/images/2.png" alt="" class="rounded object-contain opacity-60 focus:opacity-100" onclick="changePicture(this.src)">
+                    <img src="src/assets/images/3.png" alt="" class="rounded object-contain opacity-60 focus:opacity-100" onclick="changePicture(this.src)">
+                    <img src="src/assets/images/4.png" alt="" class="rounded object-contain opacity-60 focus:opacity-100" onclick="changePicture(this.src)">
                 </div>
             </div>
         </div>
 
         <!-- Right section on md view -->
-        <div id="right" class="md:w-[50%] md:pt-8 lg:pl-8 md:pl-4">
+        <div id="right" class="md:w-[50%] md:pt-8 lg:pl-6 md:pl-2">
             <!-- Title and price of product -->
             <div id="title-price" class="mb-8">
                 <h1 class="font-jakarta font-semibold text-[40px]">Nike Air Force 1 - White</h1>
@@ -98,17 +98,16 @@
         
             <!-- Product info -->
             <div id="product-info" class="flex mb-8 gap-2 flex-col">
-                <!-- <h3 class="font-jakarta font-semibold text-xl">Information product</h3>
-                <div class="border-b-2 border-gray-800 w-12 "></div> -->
-                <p class="font-jakarta md:text-lg lg:pr-32 lg:my-12">The radiance lives on in the Nike Air Force 1 '07, the basketball original that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.</p>
+                
+                <p class="font-jakarta md:text-lg  lg:pr-8 lg:mt-4">The radiance lives on in the Nike Air Force 1 '07, the basketball original that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.</p>
             </div>
             
             <!-- Color choice -->
             <div id="color" class="mb-4 md:mb-6">
                 <h3 class="font-jakarta font-semibold">Color</h3>
                 <div id="color-button" class="flex gap-2">
-                    <button class="w-20 h-10 bg-gray-800 rounded text-white font-jakarta">White</button>
-                    <button class="w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">Black</button>
+                    <button id="white-button" onclick="activeButton()" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">White</button>
+                    <button id="black-button" onclick="activeButton()" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">Black</button>
                 </div>
             </div>
             
@@ -117,21 +116,21 @@
                 <h3 class="font-jakarta font-semibold">Select size</h3>
                 
                 <div id="size-button" class="grid grid-cols-4 grid-rows-2 gap-3 gap-x-2 max-w-fit box-border">
-                    <div class=""><button class="w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta md:text-lg">39</button></div>
-                    <div><button class="w-20 h-10 bg-gray-800 rounded text-white font-jakarta md:text-lg">39</button></div>
-                    <div><button class="w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta md:text-lg">40</button></div>
-                    <div><button class="w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta md:text-lg">41</button></div>
-                    <div><button class="w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta row-start-2 md:text-lg">42</button></div>
-                    <div><button class="w-20 h-10 bg-white border-[1px] border-gray-400 rounded text-gray-400 font-jakarta row-start-2 md:text-lg">43</button></div>
+                    <div><button class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta md:text-lg">38</button></div>
+                    <div><button id="39" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta md:text-lg">39</button></div>
+                    <div><button id="40" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta md:text-lg">40</button></div>
+                    <div><button id="41" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta md:text-lg">41</button></div>
+                    <div><button id="42" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta row-start-2 md:text-lg">42</button></div>
+                    <div><button id="43" type="button" class="disabled:border-gray-500 disabled:text-gray-400 disabled:cursor-none w-20 h-10 bg-white border-[1px] border-gray-400 rounded text-gray-400 font-jakarta row-start-2 md:text-lg">43</button></div>
                 </div>
             </div>
             
             
             
             <!-- Add to cart & favorite item -->
-            <div id="cart-fav" class="flex justify-between mb-8 w-full md:w-[80%]">
-                <button class="w-[83%] h-10 bg-gray-800 border-[1px] border-gray-800 rounded text-white font-jakarta font-medium">Add to cart</button>
-                <button class="w-[15%] h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+            <div id="cart-fav" class="flex justify-between mb-8 w-full md:w-[100%] xl:w-[80%]">
+                <button class="hover:opacity-80 w-[83%] h-10 bg-gray-800 border-[1px] border-gray-800 rounded text-white font-jakarta font-medium">Add to cart</button>
+                <button class="hover:bg-gray-300  00 w-[15%] h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
             </div>
         </div>
 
