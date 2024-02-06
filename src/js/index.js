@@ -9,12 +9,23 @@ openHamburgerBar = () => {
 };
 
 
-changePicture = (src) => {
+changePicture = (src, id) => {
     const mainPicture = document.getElementById('main-picture');
-    const thumbPicture = document.getElementById('src')
+    const thumbPicture = document.getElementById('src');
+    const firstPic = document.getElementById('pic-1');
+    const choPic = document.getElementById('id');
 
     mainPicture.src = src;
-    thumbPicture.classList.add('focus');
+    
+
+    if(thumbPicture !== firstPic){
+        firstPic.classList.replace('opacity-100', 'opacity-60');
+    };
+
+    choPic.classList.add('focus:opacity-100');
+    
+
+
 };
 
 

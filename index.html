@@ -80,10 +80,10 @@
     
                 <!-- Thumbnail of another pic -->
                 <div id="thumbnail-pictures" class="flex h-32 overflow-auto gap-2 no-scrollbar lg:overflow-hidden lg:gap-0 md:h-24 lg:h-[92px] xl:h-40 lg:justify-between md:box-border">
-                    <img src="src/assets/images/1.png" alt="" class="rounded object-contain opacity-60 focus:opacity-100" onclick="changePicture(this.src)">
-                    <img src="src/assets/images/2.png" alt="" class="rounded object-contain opacity-60 focus:opacity-100" onclick="changePicture(this.src)">
-                    <img src="src/assets/images/3.png" alt="" class="rounded object-contain opacity-60 focus:opacity-100" onclick="changePicture(this.src)">
-                    <img src="src/assets/images/4.png" alt="" class="rounded object-contain opacity-60 focus:opacity-100" onclick="changePicture(this.src)">
+                    <button><img src="src/assets/images/1.png" alt="" class="rounded object-contain opacity-100" id="pic-1" onclick="changePicture(this.src, this.id)"></button>
+                    <button><img src="src/assets/images/2.png" alt="" class="rounded object-contain opacity-60" id="pic-2" onclick="changePicture(this.src, this.id)"></button>
+                    <button><img src="src/assets/images/3.png" alt="" class="rounded object-contain opacity-60" id="pic-3" onclick="changePicture(this.src, this.id)"></button>
+                    <button><img src="src/assets/images/4.png" alt="" class="rounded object-contain opacity-60" id="pic-4" onclick="changePicture(this.src, this.id)"></button>
                 </div>
             </div>
         </div>
@@ -105,9 +105,9 @@
             <!-- Color choice -->
             <div id="color" class="mb-4 md:mb-6">
                 <h3 class="font-jakarta font-semibold">Color</h3>
-                <div id="color-button" class="flex gap-2">
-                    <button id="white-button" onclick="activeButton()" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">White</button>
-                    <button id="black-button" onclick="activeButton()" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta">Black</button>
+                <div id="color-button" class="flex gap-2 ">
+                    <button id="white-button" onclick="activeButton()" type="button" class="hover:bg-gray-300  w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta focus:bg-gray-800 focus:text-white">White</button>
+                    <button id="black-button" onclick="activeButton()" type="button" class="hover:bg-gray-300  w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta focus:bg-gray-800 focus:text-white">Black</button>
                 </div>
             </div>
             
