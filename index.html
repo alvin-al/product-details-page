@@ -79,11 +79,11 @@
                 <img id="main-picture" src="src/assets/images/1.png" alt="" class="rounded-lg mb-4 md:w-full">
     
                 <!-- Thumbnail of another pic -->
-                <div id="thumbnail-pictures" class="flex h-32 overflow-auto gap-2 no-scrollbar lg:overflow-hidden lg:gap-0 md:h-24 lg:h-[92px] xl:h-40 lg:justify-between md:box-border">
-                    <button><img src="src/assets/images/1.png" alt="" class="rounded object-contain opacity-100" id="pic-1" onclick="changePicture(this.src, this.id)"></button>
-                    <button><img src="src/assets/images/2.png" alt="" class="rounded object-contain opacity-60" id="pic-2" onclick="changePicture(this.src, this.id)"></button>
-                    <button><img src="src/assets/images/3.png" alt="" class="rounded object-contain opacity-60" id="pic-3" onclick="changePicture(this.src, this.id)"></button>
-                    <button><img src="src/assets/images/4.png" alt="" class="rounded object-contain opacity-60" id="pic-4" onclick="changePicture(this.src, this.id)"></button>
+                <div id="thumbnail-pictures" class="flex h-32 overflow-auto gap-2 no-scrollbar lg:overflow-hidden lg:gap-0 md:h-24 lg:h-[92px] xl:h-40 xl:gap-4 lg:justify-between md:box-border">
+                    <button><img src="src/assets/images/1.png" alt="" class="img rounded object-contain opacity-100 border-2 border-gray-700" id="pic-1" onclick="changePicture(this.src, this.id)"></button>
+                    <button><img src="src/assets/images/2.png" alt="" class="img rounded object-contain opacity-60 " id="pic-2" onclick="changePicture(this.src, this.id)"></button>
+                    <button><img src="src/assets/images/3.png" alt="" class="img rounded object-contain opacity-60" id="pic-3" onclick="changePicture(this.src, this.id)"></button>
+                    <button><img src="src/assets/images/4.png" alt="" class="img rounded object-contain opacity-60" id="pic-4" onclick="changePicture(this.src, this.id)"></button>
                 </div>
             </div>
         </div>
@@ -106,8 +106,8 @@
             <div id="color" class="mb-4 md:mb-6">
                 <h3 class="font-jakarta font-semibold">Color</h3>
                 <div id="color-button" class="flex gap-2 ">
-                    <button id="white-button" onclick="activeButton()" type="button" class="hover:bg-gray-300  w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta focus:bg-gray-800 focus:text-white">White</button>
-                    <button id="black-button" onclick="activeButton()" type="button" class="hover:bg-gray-300  w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta focus:bg-gray-800 focus:text-white">Black</button>
+                    <button id="white-button" onclick="activeButton()" type="button" class="hover:bg-gray-300  w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta focus:bg-gray-800 focus:text-white option-1">White</button>
+                    <button id="black-button" onclick="activeButton()" type="button" class="hover:bg-gray-300  w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta focus:bg-gray-800 focus:text-white option-2">Black</button>
                 </div>
             </div>
             
@@ -115,14 +115,21 @@
             <div id="size" class="mb-8 md:mb-12 ">
                 <h3 class="font-jakarta font-semibold">Select size</h3>
                 
-                <div id="size-button" class="grid grid-cols-4 grid-rows-2 gap-3 gap-x-2 max-w-fit box-border">
-                    <div><button class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta md:text-lg">38</button></div>
-                    <div><button id="39" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta md:text-lg">39</button></div>
-                    <div><button id="40" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta md:text-lg">40</button></div>
-                    <div><button id="41" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta md:text-lg">41</button></div>
-                    <div><button id="42" type="button" class="hover:bg-gray-300 focus:bg-gray-800 focus:text-white w-20 h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta row-start-2 md:text-lg">42</button></div>
-                    <div><button id="43" type="button" class="disabled:border-gray-500 disabled:text-gray-400 disabled:cursor-none w-20 h-10 bg-white border-[1px] border-gray-400 rounded text-gray-400 font-jakarta row-start-2 md:text-lg">43</button></div>
-                </div>
+
+                <form id="size-button" class="grid grid-cols-4 grid-rows-2 gap-3 gap-x-2 max-w-fit box-border outline-none">
+                    <button type="radio" name="size" value="38" class="size-button hover:bg-gray-300 checked:bg-gray-800 checked:text-white w-20 h-10 border-[1px] border-gray-800 rounded text-gray-800 md:text-lg cursor-pointer">38</button>
+
+                    <button type="radio" name="size" value="39" class="size-button hover:bg-gray-300 checked:bg-gray-800 checked:text-white w-20 h-10 border-[1px] border-gray-800 rounded text-gray-800 md:text-lg cursor-pointer">39</button>
+
+                    <button type="radio" name="size" value="40" class="size-button hover:bg-gray-300 checked:bg-gray-800 checked:text-white w-20 h-10 border-[1px] border-gray-800 rounded text-gray-800 md:text-lg cursor-pointer">40</button>
+
+                    <button type="radio" name="size" value="41" class="size-button hover:bg-gray-300 checked:bg-gray-800 checked:text-white w-20 h-10 border-[1px] border-gray-800 rounded text-gray-800 md:text-lg cursor-pointer">41</button>
+
+                    <button type="radio" name="size" value="42" class="size-button hover:bg-gray-300 checked:bg-gray-800 checked:text-white w-20 h-10 border-[1px] border-gray-800 rounded text-gray-800 md:text-lg cursor-pointer">42</button>
+
+                    <button type="radio" name="size" value="43" class="size-button disabled:hover:bg-gray-200 disabled:border-gray-400 disabled:text-gray-400 disabled:cursor-not-allowed w-20 h-10 border-[1px] border-gray-400 rounded text-gray-400 md:text-lg" disabled>43</button>
+                  </form>
+                
             </div>
             
             
