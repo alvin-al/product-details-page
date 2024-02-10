@@ -84,15 +84,15 @@ favClick = () => {
 
 
     if(count % 2){
-        button.classList.replace('bg-white', 'bg-gray-800');
-        button.classList.replace('bg-gray-300', 'bg-gray-800');
-        button.classList.replace('hover:bg-gray-300', 'hover:bg-gray-800'); 
-        icon.classList.replace('text-gray-800', 'text-white');
-    }else{
         button.classList.replace('bg-gray-800', 'bg-white');
         button.classList.replace('bg-gray-800', 'bg-gray-300');
         button.classList.replace('hover:bg-gray-800', 'hover:bg-gray-300'); 
         icon.classList.replace('text-white', 'text-gray-800');
+    }else{
+        button.classList.replace('bg-white', 'bg-gray-800');
+        button.classList.replace('bg-gray-300', 'bg-gray-800');
+        button.classList.replace('hover:bg-gray-300', 'hover:bg-gray-800'); 
+        icon.classList.replace('text-gray-800', 'text-white');
     };
 
     
