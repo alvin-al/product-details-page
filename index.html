@@ -136,8 +136,8 @@
             
             <!-- Add to cart & favorite item -->
             <div id="cart-fav" class="flex justify-between mb-8 w-full md:w-[100%] xl:w-[80%]">
-                <button class="hover:opacity-80 w-[83%] h-10 bg-gray-800 border-[1px] border-gray-800 rounded text-white font-jakarta font-medium">Add to cart</button>
-                <button class="hover:bg-gray-300  00 w-[15%] h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                <button type="button" id="add-to-cart" class="hover:opacity-80 w-[83%] h-10 bg-gray-800 border-[1px] border-gray-800 rounded text-white font-jakarta font-medium">Add to cart</button>
+                <button type="button" value="fav" id="fav-item" class="hover:bg-gray-300 w-[15%] h-10 bg-white border-[1px] border-gray-800 rounded text-gray-800 font-jakarta" onclick="favClick()"><i id="love-icon" class="fa fa-heart text-gray-800   fill-black"></i></button>
             </div>
         </div>
 

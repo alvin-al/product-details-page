@@ -56,7 +56,6 @@ sizeClick = (id) => {
     const sizeClickk = document.getElementById(id);
 
 
-    console.log(sizeClickk);
     for(let i = 0; i < sizeBtnos.length; i++){
         sizeBtnos[i].classList.replace('bg-gray-800', 'bg-white');
         sizeBtnos[i].classList.replace('text-white', 'text-gray-800');
@@ -67,4 +66,36 @@ sizeClick = (id) => {
     sizeClickk.classList.replace('bg-white', 'bg-gray-800');
     sizeClickk.classList.replace('text-gray-800', 'text-white');
     sizeClickk.classList.replace('hover:bg-gray-300', 'hover:bg-gray-800');
+}
+
+favClick = () => {
+    const button = document.getElementById('fav-item');
+    const icon = document.getElementById('love-icon');
+
+    let count = 0;
+
+    if(localStorage.getItem('clickCount')){
+        count = parseInt(localStorage.getItem('clickCount')) + 1;
+        localStorage.setItem('clickCount', count);
+    }else{
+        localStorage.setItem('clickCount', 1);
+    }
+    
+
+
+    if(count % 2){
+        button.classList.replace('bg-white', 'bg-gray-800');
+        button.classList.replace('bg-gray-300', 'bg-gray-800');
+        button.classList.replace('hover:bg-gray-300', 'hover:bg-gray-800'); 
+        icon.classList.replace('text-gray-800', 'text-white');
+    }else{
+        button.classList.replace('bg-gray-800', 'bg-white');
+        button.classList.replace('bg-gray-800', 'bg-gray-300');
+        button.classList.replace('hover:bg-gray-800', 'hover:bg-gray-300'); 
+        icon.classList.replace('text-white', 'text-gray-800');
+    };
+
+    
+
+    console.log(count);
 }
